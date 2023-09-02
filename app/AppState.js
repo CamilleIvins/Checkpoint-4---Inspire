@@ -4,11 +4,28 @@ import { isValidProp } from './utils/IsValidProp.js'
 import { loadState } from './utils/Store.js'
 
 class ObservableAppState extends EventEmitter {
+
+
+
   page = ''
   user = null
   /** @type {import('./models/Account.js').Account | null} */
   // @ts-ignore
   account = null
+
+
+  /** @type {import('./models/Image.js').Image | null} */
+  activeImage = null
+  image = []
+
+  /** @type {import('./models/Quote.js').Quote | null} */
+  activeQuote = null
+  quote = []
+
+  /** @type {import('./models/Weather.js').Weather | null} */
+  activeWeather = null
+  weather = []
+
   /** @type {import('./models/Value.js').Value[]} */
   values = loadState('values', [Value])
   socketData = []

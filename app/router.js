@@ -1,7 +1,12 @@
 import { AboutController } from "./controllers/AboutController.js";
 import { HomeController } from "./controllers/HomeController.js";
+import { ImagesController } from "./controllers/ImagesController.js";
+import { QuotesController } from "./controllers/QuotesController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
+import { WeatherController } from "./controllers/WeatherController.js";
+import { Image } from "./models/Image.js";
 import { AboutView } from "./views/AboutView.js";
+
 
 /**
  * Register your routes for the application here
@@ -10,14 +15,15 @@ import { AboutView } from "./views/AboutView.js";
 export const router = [
   {
     path: '',
-    controller: HomeController,
+    controller: [ImagesController, QuotesController, WeatherController],
     view: /*html*/`
-    <div class="card">
+  
       <div class="card-body">
+      <div id="activeWeather"></div>
         <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
+        <button class="btn btn-dark" onclick="app.WeatherController.toggleTemp()">😎</button>
       </div>
-    </div>
+   
     `
   },
   {
