@@ -13,6 +13,9 @@ class ObservableAppState extends EventEmitter {
   // @ts-ignore
   account = null
 
+  /** @type {import('./models/Value.js').Value[]} */
+  values = loadState('values', [Value])
+  socketData = []
 
   /** @type {import('./models/Image.js').Image | null} */
   activeImage = null
@@ -26,9 +29,10 @@ class ObservableAppState extends EventEmitter {
   activeWeather = null
   weather = []
 
-  /** @type {import('./models/Value.js').Value[]} */
-  values = loadState('values', [Value])
-  socketData = []
+  /** @type {import('./models/ToDo.js').ToDo | null} */
+  activeTodo = null
+  todos = []
+
 
   // Used to load initial data
   init() {
