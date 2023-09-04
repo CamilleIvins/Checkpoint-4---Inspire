@@ -12,8 +12,10 @@ function _drawWeather() {
 export class WeatherController {
     constructor() {
         console.log('weather controller up');
-        this.getWeather()
         AppState.on('account', _drawWeather)
+        // AppState.on('account', this.getWeather)
+        this.getWeather()
+        setInterval(_drawWeather, 60000)
     }
 
     async getWeather() {

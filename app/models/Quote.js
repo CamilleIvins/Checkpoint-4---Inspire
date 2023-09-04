@@ -12,7 +12,7 @@ export class Quote {
     get activeTemplate() {
         return /*html*/ `
         <div class="col-md-6 col-12">
-        <div>
+        <div class="glass-card px-1">
         <i class="fs-5">"${this.content}"</i>
         <p id="author" class="fs-6 text-end">~${this.author}</p>
         </div>

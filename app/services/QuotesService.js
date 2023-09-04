@@ -1,9 +1,6 @@
 import { AppState } from "../AppState.js";
 import { Quote } from "../models/Quote.js";
 import { api } from "./AxiosService.js";
-api
-Quote
-AppState
 
 
 class QuotesService {

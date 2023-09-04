@@ -5,3 +5,28 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+.glass-card {
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(78, 81, 84, 0.256);
+    box-shadow: 0 0 10px 3px rgba(78, 81, 84, 0.121);
+
+}
+
+.frosted-card {
+    border-radius: 10px;
+    backdrop-filter: blur(7px);
+    background-color: rgba(209, 211, 213, 0.455);
+
+}
+
+#author {
+    opacity: 0;
+    transition: ease 0.75s;
+}
+
+#author:hover {
+    visibility: visible;
+    opacity: 1;
+}

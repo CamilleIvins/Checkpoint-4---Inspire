@@ -15,8 +15,9 @@ function _drawImage() {     //NASA lecture
 export class ImagesController {
     constructor() {
         console.log('images controller up');
-        this.getImage()
         AppState.on('account', _drawImage)  //<--see about trying to get author info somewhere....
+        this.getImage()
+        // AppState.on('account', this.getImage)  //<--see about trying to get author info somewhere....
         // AppState.on('activeImage', _drawImage)   <---should not need double draw
     }
 

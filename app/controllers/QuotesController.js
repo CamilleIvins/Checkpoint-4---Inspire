@@ -12,8 +12,9 @@ function _drawQuote() {
 export class QuotesController {
     constructor() {
         console.log('quotes controller up');
-        this.getQuote()
         AppState.on('account', _drawQuote)
+        // AppState.on('account', this.getQuote)
+        this.getQuote()
     }
 
     async getQuote() {

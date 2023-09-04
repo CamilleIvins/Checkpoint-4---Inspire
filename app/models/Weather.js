@@ -27,11 +27,16 @@ export class Weather {
 
     get activeTemplate() {
         return /*html*/ `
-        <div class="card col-md-2 col-6">
-        <div class="text-center">${this.name}</div>
-        <div class="row space-content-around text-center">
-            <div class="col-5">${this.temp}</div>
-            <div class="col-5 high-low">${this.high}/${this.low}</div>
+        <div class="frosted-card col-md-3 col-6">
+        <div class="p-1">
+            <div class="text-center">${this.name}</div>
+            <div class="row justify-content-around text-center">
+
+                <div class="col-5">Current</div>
+                <div class="col-5">High/Low</div>
+                <div class="col-5 fw-bold">${this.temp}</div>
+                <div class="col-5 high-low fw-bold">${this.high}/${this.low}</div>
+            </div>
         </div>
         </div>
         `

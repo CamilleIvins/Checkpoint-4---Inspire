@@ -29,9 +29,16 @@ class ObservableAppState extends EventEmitter {
   activeWeather = null
   weather = []
 
+  /** @type {ToDo[]} */
+  myTodos = []
   /** @type {import('./models/ToDo.js').ToDo | null} */
   activeTodo = null
-  todos = []
+  todos = [
+    ({
+      completed: true,
+      description: "test task",
+    })
+  ]
 
 
   // Used to load initial data

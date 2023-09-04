@@ -19,7 +19,7 @@
   <!-- SECTION -->
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand p" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
           loading="lazy">
         <span class="ml-2">Checkpoint-4-Inspire</span>
@@ -31,7 +31,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <!-- NAVLINKS -->
-          <a href="#/about" class="nav-link">About</a>
+          <!-- <a href="#/about" class="nav-link">About</a> -->
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -43,7 +43,7 @@
 
     <section id="auth-template">
       <!-- TODO REMOVE THE AUTH TEMPLATE ONCE YOU VERIFY YOUR AUTH SETTINGS -->
-      <!-- <div class="container-fluid">
+      <div class="container-fluid">
         <div class="row my-3">
           <div class="col-lg-5" id="auth-settings">
             <div class="card p-2 skeleton-loader">
@@ -62,15 +62,52 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-      <section id="router-view">
-        <!-- primary viewport -->
-        <!-- <div id="activeWeather"></div> -->
-        <div class="container-fluid">
-          <section class="row justify-content-center align-items-center" id="activeImage">
+    <section id="router-view">
+      <!-- primary viewport -->
 
-            <!-- 
+
+
+      <!-- <div id="activeWeather"></div> -->
+      <div class="container-fluid">
+        <section class="row justify-content-center align-items-center" id="activeImage">
+
+          <!-- <div>
+              <div id="activeWeather"></div>
+              <p>Home Page</p>
+              <button class="btn btn-dark" onclick="app.WeatherController.toggleTemp()">😎</button>
+            </div> -->
+
+          <!--SECTION todo listing -->
+          <!-- <section class="row justify-content-end">
+              <button class="btn btn-info col-md-1 col-2 ms-1" data-bs-toggle="collapse"
+                data-bs-target="#newToDoOffcanvas">
+                To Do List <i class="mdi mdi-checkbox-multiple-marked-outline"></i>
+              </button>
+            </section>
+            <div id="newToDoOffcanvas" class="collapse collapse-end ms-1 p-1">
+
+
+              <form class="row p-1" onsubmit="app.ToDoController.createToDo()">
+
+                <div class="form-floating mb-3 col-4">
+                  <label for="ToDo">New To Do</label>
+                  <input required type="text" minLength="3" maxLength="35" class="form-control" id="description"
+                    name="description" placeholder="task">
+                </div>
+
+                <div class="text-end">
+                  <button type="submit" class="btn btn-info">List To Do</button>
+
+                </div>
+
+              </form>
+              <hr>
+              <div id="todoList">
+                QWERTY -- pops up then disappears </div>
+            </div> -->
+          <!-- 
             <button class="btn btn-info col-md-3 col-12 ms-1" data-bs-toggle="offcanvas"
               data-bs-target="#newToDoOffcanvas">
               <i class="mdi mdi-feather"></i> To Do List <i class="mdi mdi-feather"></i>
@@ -106,7 +143,7 @@
               </form>
             </div> -->
 
-          </section>
+        </section>
 
 
   </main>
