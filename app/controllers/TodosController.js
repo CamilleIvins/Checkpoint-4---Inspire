@@ -80,6 +80,15 @@ export class ToDoController {
         }
     }
 
+    async setActiveToDo(todoId) {
+        try {
+            await todoservice.setActiveToDo(todoId)
+
+        } catch (error) {
+            Pop.error(error)
+        }
+    }
+
     async toggleCheck(todoId) {
         try {
             await todoservice.toggleCheck(todoId)
@@ -87,7 +96,6 @@ export class ToDoController {
             Pop.error(error.message)
         }
     }
-
 }
 
     // async createToDo(event) {

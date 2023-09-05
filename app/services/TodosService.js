@@ -8,11 +8,11 @@ import { api } from "./AxiosService.js"
 // this is where we will look at Spells and Jot
 
 class ToDoService {
-    // async setActiveToDo(todoId) {
-    //     let task = AppState.todos.find(todo => todo.id == todoId)
-    //     const res = await api.get(`api/todos/${todoId}`)
-    //     AppState.activeTodo = task
-    // }
+    async setActiveToDo(todoId) {
+        let task = AppState.todos.find(todo => todo.id == todoId)
+        const res = await api.get(`api/todos/${todoId}`)
+        AppState.activeTodo = task
+    }
 
     async toggleCheck(todoId) {
         let targetTask = AppState.todos.find(todo => todo.id == todoId)
@@ -20,13 +20,16 @@ class ToDoService {
         if (targetTask.completed == false) {
             debugger
             targetTask.completed = true
-        } else if (targetTask.completed == true) {
-            targetTask.completed = false
+            AppState.emit('activeTodo')
+            const res = await api.put(`api/todos/${todoId}`)
+            console.log('mark completed', res.data);
         }
+        //  else if (targetTask.completed == true) {
+        //     targetTask.completed = false
+        //     AppState.emit('activeTodo')
+        //     const res = await api.put(`api/todos/${todoId}`)
+        // }
         // use the back-ticks, or else it will not(⬇️BLUE) run appropriately
-        const res = await api.put(`api/todos/${todoId}`)
-        console.log('mark completed', res.data);
-        AppState.emit('todos')
     }
 
     // async toggleCheck(todoId) {
