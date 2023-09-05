@@ -18,11 +18,13 @@
 <body>
   <!-- SECTION -->
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
+    <nav class="navbar navbar-dark navbar-expand glass-card text-light px-2">
       <a class="navbar-brand p" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ml-2">Checkpoint-4-Inspire</span>
+        <img class="logo"
+          src="https://images.unsplash.com/photo-1665400595593-476670c1f0f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3880&q=80"
+          height="45" alt="" loading="lazy">
+        <span class="ml-2">Inspired?</span>
+
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,11 +41,11 @@
   </header>
 
   <!-- SECTION -->
-  <main>
+  <main class="container-fluid">
 
     <section id="auth-template">
       <!-- TODO REMOVE THE AUTH TEMPLATE ONCE YOU VERIFY YOUR AUTH SETTINGS -->
-      <div class="container-fluid">
+      <!-- <div class="container-fluid">
         <div class="row my-3">
           <div class="col-lg-5" id="auth-settings">
             <div class="card p-2 skeleton-loader">
@@ -62,25 +64,25 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="router-view">
-      <!-- primary viewport -->
+      <section id="router-view">
+        <!-- primary viewport -->
 
 
 
-      <!-- <div id="activeWeather"></div> -->
-      <div class="container-fluid">
-        <section class="row justify-content-center align-items-center" id="activeImage">
+        <!-- <div id="activeWeather"></div> -->
+        <div class="container-fluid">
+          <section class="row justify-content-center align-items-center" id="activeImage">
 
-          <!-- <div>
+            <!-- <div>
               <div id="activeWeather"></div>
               <p>Home Page</p>
               <button class="btn btn-dark" onclick="app.WeatherController.toggleTemp()">😎</button>
             </div> -->
 
-          <!--SECTION todo listing -->
-          <!-- <section class="row justify-content-end">
+            <!--SECTION todo listing -->
+            <!-- <section class="row justify-content-end">
               <button class="btn btn-info col-md-1 col-2 ms-1" data-bs-toggle="collapse"
                 data-bs-target="#newToDoOffcanvas">
                 To Do List <i class="mdi mdi-checkbox-multiple-marked-outline"></i>
@@ -107,7 +109,7 @@
               <div id="todoList">
                 QWERTY -- pops up then disappears </div>
             </div> -->
-          <!-- 
+            <!-- 
             <button class="btn btn-info col-md-3 col-12 ms-1" data-bs-toggle="offcanvas"
               data-bs-target="#newToDoOffcanvas">
               <i class="mdi mdi-feather"></i> To Do List <i class="mdi mdi-feather"></i>
@@ -143,7 +145,7 @@
               </form>
             </div> -->
 
-        </section>
+          </section>
 
 
   </main>
@@ -153,7 +155,8 @@
     <div id="activeQuote" class="row text-light justify-content-center">
 
     </div>
-    <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
+    <span id="clock" class="ml-2"></span>
+    <!-- <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p> -->
     </div>
   </footer>
 

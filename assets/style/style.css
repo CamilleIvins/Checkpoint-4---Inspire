@@ -30,3 +30,12 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
+button.frosted-card:hover {
+    color: lavender;
+}
+
+.logo {
+    border-radius: 15px;
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.282);
+}
