@@ -29,6 +29,19 @@ class ToDoService {
         AppState.emit('todos')
     }
 
+    // async toggleCheck(todoId) {
+    //     let targetTask = AppState.todos.find(todo => todo.id == todoId)
+    //     AppState.activeTodo = targetTask
+    //     if (targetTask.completed == false) {
+    //         targetTask.completed = true
+    //         AppState.emit('todos')
+    //     } else if (targetTask.completed == true) {
+    //         targetTask.completed = false
+    //         AppState.emit('todos')
+    //     }
+    // }
+
+
     async createToDo(formData) {
         const res = await api.post('api/todos', formData)
         const newTask = new ToDo(res.data)
