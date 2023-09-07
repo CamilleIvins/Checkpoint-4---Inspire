@@ -10,14 +10,18 @@ function _drawToDosList() {
     console.log('todo draw function');
     let tasks = AppState.todos
     let content = ``
-    let todosLeft
+    let todosLeft = 0
     tasks.forEach(task => content += task.listTemplate)
     tasks.forEach(task => {
+        console.log('counting', todosLeft);
         if (!task.completed) {
             todosLeft++
         }
     })
-    // setHTML('todoButton', ToDo.todosCount(todosLeft))
+    let uncomplete = AppState.todos.filter(todo => todo.completed == false)
+    console.log('uncompleted', todosLeft);
+
+    setHTML('todoCount', todosLeft)
     setHTML('todoList', content)
 }
 
@@ -91,6 +95,7 @@ export class ToDoController {
 
     async toggleCheck(todoId) {
         try {
+            console.log('checking a box', todoId);
             await todoservice.toggleCheck(todoId)
         } catch (error) {
             Pop.error(error.message)

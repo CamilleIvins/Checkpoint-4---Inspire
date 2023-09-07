@@ -41,7 +41,9 @@ export class ToDo {
     //     `
     // }
 
-    static todosCount(todosLeft) {
+    static todosCount() {
+
+
         return `
     <button class="todoButton" class="btn frosted-card col-md-1 col-2 me-2" data-bs-toggle="offcanvas"
       data-bs-target="#newToDoOffcanvas">
@@ -53,7 +55,7 @@ export class ToDo {
     get toggledCheck() {
         if (this.completed) {
             return `
-            <input onchange="app.ToDoController.toggleCheck('${this.id}')" type="checkbox" >
+            <input checked onchange="app.ToDoController.toggleCheck('${this.id}')" type="checkbox" >
             `
         } else {
             return `

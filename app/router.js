@@ -30,9 +30,9 @@ export const router = [
   </div>
     
   
-    <button class="btn frosted-card col-md-1 col-2 me-2" data-bs-toggle="offcanvas"
+    <button id="todoButton" class="btn frosted-card col-md-1 col-2 me-2" data-bs-toggle="offcanvas"
       data-bs-target="#newToDoOffcanvas">
-      To Do List <span id="todoCount">${AppState.todosLeft}</span><i class="mdi mdi-checkbox-multiple-marked-outline"></i>
+      To Do List <span id="todoCount">0</span><i class="mdi mdi-checkbox-multiple-marked-outline"></i>
     </button>
   </section>
 
